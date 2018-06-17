@@ -26,15 +26,6 @@ TARGET_COPY_OUT_VENDOR := vendor
 # Kernel
 TARGET_KERNEL_CONFIG := hardrock_oxygen_defconfig
 
-# Power
-TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/enable_dt2w"
-
-# Properties
-TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
-
-# Lights
-TARGET_PROVIDES_LIBLIGHT := true
-
 # Partitions
 BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
@@ -44,9 +35,11 @@ BOARD_VENDORIMAGE_PARTITION_SIZE := 872415232
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/enable_dt2w"
 
-# Shims
-TARGET_LD_SHIM_LIBS += \
-    /system/vendor/lib/libmmcamera_ppeiscore.so|libshim_camera.so
+# Properties
+TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
+
+# Power
+TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/enable_dt2w"
 
 # Treble
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
