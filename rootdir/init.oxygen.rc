@@ -55,5 +55,5 @@ on boot
 service goodixfp /vendor/bin/goodixfp
     class late_start
     user system
-    group system sdcard_rw
+    group system drmrpc
     oneshot
